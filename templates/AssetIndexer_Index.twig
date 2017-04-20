@@ -1,0 +1,20 @@
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% includeCssResource "assetindexer/css/AssetIndexer_Style.css" %}
+{#
+{% includeJsResource "assetindexer/js/flow.js/dist/flow.js" %}
+{% includeJsFile "https://unpkg.com/vue/dist/vue.js" %}
+{% includeJsResource "assetindexer/js/AssetIndexer_Script2.js" %}
+#}
+{% includeJs 'window.AssetIndexer = window.AssetIndexer || {};window.AssetIndexer.concurrentWorkers = ' ~ concurrentWorkers ~ ';' %}
+{% includeJsResource "assetindexer/js/assetindexer.js" %}
+
+{% set title = 'Asset Indexer' | t %}
+{% set sources = craft.elementIndexes.getSources('Asset', 'index') %}
+
+{% set content %}
+<div id="assetIndexer">
+    <app></app>
+</div>
+{% endset %}

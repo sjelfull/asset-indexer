@@ -1,0 +1,12 @@
+{
+    "name": "fred/assetindexer",
+    "require": {
+        "tonyhhyip/sse": "^2.1"
+    },
+    "authors": [
+        {
+            "name": "Fred Carlsen",
+            "email": "fred@sjelfull.no"
+        }
+    ]
+}

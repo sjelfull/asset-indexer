@@ -1,0 +1,26 @@
+{#
+/**
+ * Asset Indexer plugin for Craft CMS
+ *
+ * Asset Indexer Settings.twig
+ *
+ * @author    Fred Carlsen
+ * @copyright Copyright (c) 2016 Fred Carlsen
+ * @link      http://sjelfull.no
+ * @package   AssetIndexer
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% includeCssResource "assetindexer/css/AssetIndexer_Style.css" %}
+{% includeJsResource "assetindexer/js/AssetIndexer_Script.js" %}
+
+{{ forms.textField({
+    label: 'Concurrent index workers',
+    instructions: 'How many workers will run at a time. Generally, this is how many CPU cores your server has.',
+    id: 'concurrentWorkers',
+    name: 'concurrentWorkers',
+    value: settings['concurrentWorkers']})
+}}
